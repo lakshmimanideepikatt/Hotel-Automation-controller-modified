@@ -38,7 +38,7 @@ public class Hotel{
 		movement.electronicEquipmentMap.get("Light").on=true;
 		int power=fl.totalPowerConsumption();
 			for(int i=0;i<sub.size()&&power>limit();i++) {
-				if(i==(subCorridor-1)) {
+				if(i==(subCorridor-1)&&sub.size()!=1) {
 					continue;
 				}
 				else {
@@ -58,7 +58,7 @@ public class Hotel{
 		movement.electronicEquipmentMap.get("Light").on=false;
 		int power=fl.totalPowerConsumption();
 			for(int i=0;i<sub.size()&&power<limit();i++) {
-				if(i==(subCorridor-1)) {
+				if(i==(subCorridor-1)&&sub.size()!=1) {
 					continue;
 				}
 				else {
